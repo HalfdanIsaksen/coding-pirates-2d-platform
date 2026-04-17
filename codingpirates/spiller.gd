@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 	
 	if position.y > 2000:
-		position = player_start_position
+		Gamemanager.player_died(self)
 		
 	get_input()
 	move_and_slide()
@@ -26,12 +26,12 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		
 		if c.get_collider() is StaticBody2D:
-			position = player_start_position
-			velocity = Vector2.ZERO
+			Gamemanager.player_died(self)
 			break
 
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * 20)
+			
 			
 			
 			

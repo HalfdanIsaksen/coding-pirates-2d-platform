@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d3t8wkf4mcw6g"]
 
 [ext_resource type="Script" uid="uid://c3j2hwpue52xg" path="res://health.gd" id="1_ledv5"]
+[ext_resource type="Texture2D" uid="uid://te0kp6qjay7f" path="res://Sprite_heart.png" id="2_bydfv"]
 
 [node name="Health" type="CanvasLayer" unique_id=880143526]
 script = ExtResource("1_ledv5")
@@ -11,9 +12,15 @@ offset_bottom = 40.0
 
 [node name="heart" type="TextureRect" parent="bar" unique_id=871231081]
 layout_mode = 2
+texture = ExtResource("2_bydfv")
+stretch_mode = 3
 
 [node name="heart2" type="TextureRect" parent="bar" unique_id=83720085]
 layout_mode = 2
+texture = ExtResource("2_bydfv")
+stretch_mode = 3
 
 [node name="heart3" type="TextureRect" parent="bar" unique_id=1368938487]
 layout_mode = 2
+texture = ExtResource("2_bydfv")
+stretch_mode = 3

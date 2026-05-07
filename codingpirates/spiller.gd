@@ -6,6 +6,9 @@ const JUMP_VELOCITY = -300
 
 const player_start_position := Vector2(33, 9)
 
+func _ready() -> void:
+	$Sprite2D/AnimationPlayer.play("walk")
+
 func get_input():
 	velocity.x = Input.get_axis("Left", "Right") * speed
 
